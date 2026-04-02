@@ -1,7 +1,7 @@
 # AI Automation Specialist — Portfolio
 ### Janetta Barker
 
-🌐 **[View the live portfolio](https://janettabarker.github.io/ai-automation-portfolio/)**
+🌐 **[View the live portfolio]([https://janettabarker.github.io/ai-automation-portfolio/](https://janettaeyvonne-glitch.github.io/my-portfolio/)**
 
 ---
 
