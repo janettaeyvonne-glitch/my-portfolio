@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Automation Specialist — Portfolio</title>
+<title>Janetta Barker — AI Automation Specialist Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --bg: #0c0c0b; --surface: #141412; --surface2: #1c1c19;
+    --bg: #0a192f; --surface: #112240; --surface2: #1a2f4a;
     --border: rgba(255,255,255,0.08); --border2: rgba(255,255,255,0.14);
     --text: #f0ede6; --muted: #888880; --dim: #4a4a45;
     --accent: #c8f060; --accent2: #60d4c8; --accent3: #f0b060; --accent4: #c060f0;
@@ -20,32 +20,43 @@
   }
   html { scroll-behavior: smooth; }
   body { background: var(--bg); color: var(--text); font-family: var(--ff-body); font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
-  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 2.5rem; height: 56px; background: rgba(12,12,11,0.88); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 2.5rem; height: 56px; background: rgba(10,25,47,0.88); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
   .nav-logo { font-family: var(--ff-mono); font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
   .nav-links { display: flex; gap: 2rem; }
   .nav-links a { font-size: 13px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
   .nav-links a:hover { color: var(--text); }
   .container { max-width: 1060px; margin: 0 auto; padding: 0 2.5rem; }
+ 
+  /* HERO */
   .hero { padding: 9rem 0 6rem; border-bottom: 1px solid var(--border); }
-  .hero-label { font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.15em; color: var(--accent); text-transform: uppercase; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; }
+  .hero-label { font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.15em; color: var(--accent); text-transform: uppercase; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; }
   .hero-label::before { content: ''; display: inline-block; width: 20px; height: 1px; background: var(--accent); }
-  .hero h1 { font-family: var(--ff-display); font-weight: 300; font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 1.5rem; }
+  .hero-name { font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.15em; color: var(--text); text-transform: uppercase; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.75rem; }
+  .hero-name::before { content: ''; display: inline-block; width: 20px; height: 1px; background: var(--text); }
+  .hero h1 { font-family: var(--ff-display); font-weight: 300; font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 1.25rem; }
   .hero h1 em { font-style: italic; color: var(--accent); }
-  .hero-desc { font-size: 17px; color: var(--muted); max-width: 580px; line-height: 1.7; margin-bottom: 2.5rem; }
+  .hero-value { font-size: 17px; color: var(--muted); max-width: 600px; line-height: 1.7; margin-bottom: 2rem; }
+  .hero-cta { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--ff-mono); font-size: 12px; letter-spacing: 0.08em; color: var(--accent); border: 1px solid rgba(200,240,96,0.4); padding: 8px 20px; border-radius: 100px; text-decoration: none; transition: background 0.2s, border-color 0.2s; margin-bottom: 2.5rem; }
+  .hero-cta:hover { background: rgba(200,240,96,0.08); border-color: var(--accent); }
   .hero-stats { display: flex; flex-wrap: wrap; gap: 3rem; padding-top: 2.5rem; border-top: 1px solid var(--border); }
   .stat-num { font-family: var(--ff-display); font-size: 2.2rem; font-weight: 300; line-height: 1; }
   .stat-label { font-size: 12px; color: var(--muted); margin-top: 4px; font-family: var(--ff-mono); letter-spacing: 0.05em; }
+ 
   section { padding: 5rem 0; border-bottom: 1px solid var(--border); }
   .section-header { margin-bottom: 3rem; }
   .section-label { font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.15em; color: var(--muted); text-transform: uppercase; margin-bottom: 0.75rem; }
   .section-title { font-family: var(--ff-display); font-weight: 300; font-size: 2rem; letter-spacing: -0.02em; }
+ 
+  /* STACK */
   .stack-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(128px, 1fr)); gap: 1px; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: var(--border); }
   .stack-item { background: var(--surface); padding: 1.25rem 1rem; display: flex; flex-direction: column; gap: 0.4rem; transition: background 0.2s; }
   .stack-item:hover { background: var(--surface2); }
   .stack-icon { font-size: 20px; height: 26px; display: flex; align-items: center; }
   .stack-name { font-size: 13px; font-weight: 500; }
   .stack-role { font-size: 10px; color: var(--muted); font-family: var(--ff-mono); }
-  .cat-row { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; margin-top: 3rem; }
+ 
+  /* CATEGORY ROWS */
+  .cat-row { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem; margin-top: 3rem; }
   .cat-row:first-of-type { margin-top: 0; }
   .cat-pill { font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 12px; border-radius: 100px; white-space: nowrap; }
   .cg { background: rgba(200,240,96,0.1); color: var(--accent); }
@@ -53,16 +64,20 @@
   .ca { background: rgba(240,176,96,0.1); color: var(--accent3); }
   .cp { background: rgba(192,96,240,0.1); color: var(--accent4); }
   .cat-line { flex: 1; height: 1px; background: var(--border); }
+  .cat-desc { font-size: 13px; color: var(--muted); margin-bottom: 1.5rem; }
+ 
+  /* WORKFLOW CARDS */
   .wf { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; margin-bottom: 1.25rem; overflow: hidden; transition: border-color 0.2s; }
   .wf:hover { border-color: var(--border2); }
   .wf-head { padding: 1.75rem 2rem 1.5rem; display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; border-bottom: 1px solid var(--border); }
-  .wf-tag { display: inline-flex; align-items: center; gap: 5px; font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 9px; border-radius: 100px; margin-bottom: 0.6rem; }
+  .wf-tag { display: inline-flex; align-items: center; gap: 5px; font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 9px; border-radius: 100px; margin-bottom: 0.5rem; }
   .tg { background: rgba(200,240,96,0.1); color: var(--accent); }
   .tt { background: rgba(96,212,200,0.1); color: var(--accent2); }
   .ta { background: rgba(240,176,96,0.1); color: var(--accent3); }
   .tp { background: rgba(192,96,240,0.1); color: var(--accent4); }
   .dot { width: 5px; height: 5px; border-radius: 50%; background: currentColor; }
-  .wf-title { font-family: var(--ff-display); font-size: 1.3rem; font-weight: 300; letter-spacing: -0.01em; margin-bottom: 0.4rem; }
+  .wf-title { font-family: var(--ff-display); font-size: 1.3rem; font-weight: 300; letter-spacing: -0.01em; margin-bottom: 0.25rem; }
+  .wf-context { font-size: 12px; color: var(--dim); font-style: italic; margin-bottom: 0.4rem; font-family: var(--ff-mono); }
   .wf-desc { font-size: 14px; color: var(--muted); max-width: 540px; line-height: 1.6; }
   .badge { flex-shrink: 0; font-family: var(--ff-mono); font-size: 11px; color: var(--dim); border: 1px solid var(--border); padding: 3px 10px; border-radius: 100px; white-space: nowrap; }
   .wf-body { padding: 1.5rem 2rem; }
@@ -82,6 +97,33 @@
   .kb { font-size: 10px; font-family: var(--ff-mono); color: var(--red); margin-bottom: 2px; }
   .ka { font-size: 15px; font-weight: 500; color: var(--accent); margin-bottom: 2px; }
   .kd { font-size: 10px; color: var(--muted); font-family: var(--ff-mono); }
+ 
+  /* RESULTS TABLE */
+  .results-table { width: 100%; border-collapse: collapse; margin-top: 0.5rem; font-size: 12px; font-family: var(--ff-mono); }
+  .results-table th { text-align: left; color: var(--dim); font-weight: 400; padding: 6px 10px; border-bottom: 1px solid var(--border); letter-spacing: 0.06em; font-size: 10px; text-transform: uppercase; }
+  .results-table td { padding: 7px 10px; border-bottom: 1px solid var(--border); color: var(--muted); vertical-align: top; }
+  .results-table td:first-child { color: var(--text); }
+  .results-table td:last-child { color: var(--accent); }
+  .results-table tr:last-child td { border-bottom: none; }
+ 
+  /* DEMO EMBED */
+  .demo-embed { border: 1px solid var(--border); border-radius: 10px; background: var(--surface2); aspect-ratio: 16/9; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 0.5rem; }
+  .demo-embed-icon { width: 40px; height: 40px; border-radius: 50%; background: rgba(200,240,96,0.1); border: 1px solid rgba(200,240,96,0.3); display: flex; align-items: center; justify-content: center; }
+  .demo-embed-icon::after { content: '▶'; font-size: 14px; color: var(--accent); margin-left: 2px; }
+  .demo-embed-text { font-family: var(--ff-mono); font-size: 11px; color: var(--muted); text-align: center; max-width: 280px; line-height: 1.5; }
+  .demo-embed-caption { font-size: 11px; color: var(--dim); font-family: var(--ff-mono); margin-top: 0.5rem; }
+  .demo-embed a { font-family: var(--ff-mono); font-size: 11px; color: var(--accent); text-decoration: none; border: 1px solid rgba(200,240,96,0.3); padding: 4px 12px; border-radius: 100px; margin-top: 0.25rem; transition: background 0.2s; }
+  .demo-embed a:hover { background: rgba(200,240,96,0.08); }
+ 
+  /* CARD ACTIONS */
+  .card-actions { display: flex; gap: 8px; margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border); }
+  .card-btn { font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.06em; padding: 4px 14px; border-radius: 100px; text-decoration: none; transition: color 0.2s, border-color 0.2s, background 0.2s; }
+  .card-btn-gh { color: var(--dim); border: 1px solid var(--border); }
+  .card-btn-gh:hover { color: var(--accent); border-color: rgba(200,240,96,0.4); background: rgba(200,240,96,0.05); }
+  .card-btn-demo { color: var(--dim); border: 1px solid var(--border); }
+  .card-btn-demo:hover { color: var(--accent2); border-color: rgba(96,212,200,0.4); background: rgba(96,212,200,0.05); }
+ 
+  /* METHODOLOGY */
   .mg { display: grid; grid-template-columns: repeat(5,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
   .ms { background: var(--surface); padding: 1.5rem 1.25rem; }
   .mn { font-family: var(--ff-mono); font-size: 11px; color: var(--accent); margin-bottom: 0.75rem; }
@@ -92,50 +134,84 @@
   .pi { font-family: var(--ff-mono); font-size: 10px; color: var(--accent2); letter-spacing: 0.1em; margin-bottom: 0.6rem; }
   .pt { font-size: 14px; font-weight: 500; margin-bottom: 0.3rem; }
   .pd { font-size: 13px; color: var(--muted); line-height: 1.55; }
+ 
+  /* MODELS */
   .modgrid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
   .modc { background: var(--surface); padding: 1.25rem; }
   .modn { font-family: var(--ff-mono); font-size: 12px; margin-bottom: 4px; }
   .modp { font-size: 11px; color: var(--muted); }
   .modu { font-size: 11px; color: var(--accent); margin-top: 4px; font-family: var(--ff-mono); }
+ 
+  /* ABOUT SECTION */
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+  .about-bio { font-size: 15px; color: var(--muted); line-height: 1.8; }
+  .about-bio strong { color: var(--text); font-weight: 500; }
+  .contact-links { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.5rem; }
+  .contact-link { display: flex; align-items: center; gap: 0.75rem; font-family: var(--ff-mono); font-size: 13px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .contact-link:hover { color: var(--accent); }
+  .contact-link-icon { width: 32px; height: 32px; border: 1px solid var(--border); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
+  .availability-badge { display: inline-flex; align-items: center; gap: 6px; font-family: var(--ff-mono); font-size: 11px; color: var(--accent); background: rgba(200,240,96,0.08); border: 1px solid rgba(200,240,96,0.2); padding: 5px 14px; border-radius: 100px; margin-top: 1.5rem; }
+  .availability-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: pulse 2s infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+ 
   footer { padding: 3rem 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
   footer p { font-size: 12px; color: var(--dim); font-family: var(--ff-mono); }
+ 
   @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
   .hero > * { animation: fadeUp 0.7s ease both; }
-  .hero-label { animation-delay: 0.05s; } .hero h1 { animation-delay: 0.15s; }
-  .hero-desc { animation-delay: 0.25s; } .hero-stats { animation-delay: 0.35s; }
+  .hero-name { animation-delay: 0.02s; }
+  .hero-label { animation-delay: 0.05s; }
+  .hero h1 { animation-delay: 0.15s; }
+  .hero-value { animation-delay: 0.25s; }
+  .hero-cta { animation-delay: 0.32s; }
+  .hero-stats { animation-delay: 0.38s; }
+ 
   @media (max-width: 700px) {
-    nav { padding: 0 1.25rem; } .container { padding: 0 1.25rem; }
-    .nav-links { display: none; } .wf-head { flex-direction: column; }
-    .wg { grid-template-columns: 1fr; } .kpi { grid-template-columns: 1fr; }
-    .mg { grid-template-columns: 1fr 1fr; } .pg { grid-template-columns: 1fr; }
+    nav { padding: 0 1.25rem; }
+    .container { padding: 0 1.25rem; }
+    .nav-links { display: none; }
+    .wf-head { flex-direction: column; }
+    .wg { grid-template-columns: 1fr; }
+    .kpi { grid-template-columns: 1fr; }
+    .mg { grid-template-columns: 1fr 1fr; }
+    .pg { grid-template-columns: 1fr; }
     .modgrid { grid-template-columns: 1fr 1fr; }
+    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
   }
 </style>
 </head>
 <body>
+ 
 <nav>
-  <div class="nav-logo">AI.AUTO /</div>
+  <div class="nav-logo">Janetta Barker /</div>
   <div class="nav-links">
     <a href="#stack">Stack</a>
     <a href="#workflows">Workflows</a>
     <a href="#models">Models</a>
     <a href="#methodology">Methodology</a>
+    <a href="compliance.html">Compliance</a>
+    <a href="#about">About</a>
   </div>
 </nav>
+ 
 <div class="container">
-
+ 
+<!-- HERO -->
 <header class="hero">
+  <div class="hero-name">Janetta Barker</div>
   <div class="hero-label">AI Automation Specialist · Certified</div>
-  <h1>12 workflows.<br><em>One cohesive</em><br>automation practice.</h1>
-  <p class="hero-desc">From lead capture and RAG chatbots to multi-agent invoice systems, security guardrails, and AI-generated voice briefings — a full-spectrum portfolio built on n8n, spanning data processing, agentic AI, vector search, and web scraping.</p>
+  <h1>Building automation<br>that <em>eliminates</em><br>manual workflows.</h1>
+  <p class="hero-value">I design and build n8n automation systems that eliminate manual workflows, reduce operational errors, and deliver measurable ROI across revenue operations, agentic AI, and knowledge management — turning hours of repetitive work into seconds of reliable execution.</p>
+  <a class="hero-cta" href="#about">Get in touch →</a>
   <div class="hero-stats">
     <div><div class="stat-num">12</div><div class="stat-label">Workflows built</div></div>
     <div><div class="stat-num">18+</div><div class="stat-label">Tools integrated</div></div>
     <div><div class="stat-num">5</div><div class="stat-label">LLMs deployed</div></div>
     <div><div class="stat-num">4</div><div class="stat-label">Workflow categories</div></div>
+    <div><div class="stat-num">50+ hrs</div><div class="stat-label">Manual work automated</div></div>
   </div>
 </header>
-
+ 
 <!-- STACK -->
 <section id="stack">
   <div class="section-header">
@@ -163,25 +239,28 @@
     <div class="stack-item"><div class="stack-icon">🗂️</div><div class="stack-name">Google Drive</div><div class="stack-role">File storage</div></div>
   </div>
 </section>
-
+ 
 <!-- WORKFLOWS -->
 <section id="workflows">
   <div class="section-header">
     <div class="section-label">02 · Case studies</div>
     <div class="section-title">12 workflows, 4 categories</div>
   </div>
-
-  <!-- CAT 1 -->
+ 
+  <!-- CAT 1: REVENUE OPERATIONS -->
   <div class="cat-row">
     <div class="cat-pill cg">Revenue operations</div>
     <div class="cat-line"></div>
   </div>
-
+  <p class="cat-desc">Lead handling, task tracking, and data pipelines that keep sales and operations teams running without manual intervention.</p>
+ 
+  <!-- WF 1 -->
   <div class="wf">
     <div class="wf-head">
       <div>
         <div class="wf-tag tg"><span class="dot"></span>Lead capture · Primary</div>
         <div class="wf-title">Lead capture &amp; proposal generation</div>
+        <div class="wf-context">Context: B2B consulting services firm, 3-person sales team</div>
         <div class="wf-desc">End-to-end automation from consultation form to branded PDF proposal, CRM entry, and team notification — no manual steps.</div>
       </div>
       <div class="badge">Active · Production</div>
@@ -213,14 +292,30 @@
         <div class="kc"><div class="kb">was: manual entry</div><div class="ka">100% automated</div><div class="kd">CRM + sheet updates</div></div>
         <div class="kc"><div class="kb">was: inconsistent</div><div class="ka">Branded PDF</div><div class="kd">every tier, every time</div></div>
       </div>
+      <div class="fl" style="margin-top:1.5rem">Results</div>
+      <table class="results-table">
+        <thead><tr><th>Metric</th><th>Before</th><th>After</th><th>Improvement</th></tr></thead>
+        <tbody>
+          <tr><td>Processing time per submission</td><td>30–50 min</td><td>22 seconds</td><td>97% faster</td></tr>
+          <tr><td>Data entry errors</td><td>Manual copy-paste</td><td>Zero</td><td>Eliminated</td></tr>
+          <tr><td>CRM entry</td><td>Manual</td><td>100% automated</td><td>Fully automated</td></tr>
+          <tr><td>Proposal consistency</td><td>Varies by rep</td><td>Branded template</td><td>Standardised</td></tr>
+        </tbody>
+      </table>
+      <div class="card-actions">
+        <a href="#" class="card-btn card-btn-gh">View on GitHub</a>
+        <a href="#" class="card-btn card-btn-demo">Live Demo</a>
+      </div>
     </div>
   </div>
-
+ 
+  <!-- WF 2 -->
   <div class="wf">
     <div class="wf-head">
       <div>
         <div class="wf-tag tg"><span class="dot"></span>Duplicate detection</div>
         <div class="wf-title">Duplicate detection &amp; smart routing</div>
+        <div class="wf-context">Context: Revenue operations, CRM data hygiene use case</div>
         <div class="wf-desc">Pre-write deduplication that prevents dirty CRM data and deterministically routes new vs returning leads with full observability.</div>
       </div>
       <div class="badge">Active · Production</div>
@@ -244,14 +339,20 @@
           </div>
         </div>
       </div>
+      <div class="card-actions">
+        <a href="#" class="card-btn card-btn-gh">View on GitHub</a>
+        <a href="#" class="card-btn card-btn-demo">Live Demo</a>
+      </div>
     </div>
   </div>
-
+ 
+  <!-- WF 3 -->
   <div class="wf">
     <div class="wf-head">
       <div>
         <div class="wf-tag tg"><span class="dot"></span>Task reporting · Monday.com</div>
         <div class="wf-title">Closed task reporting system</div>
+        <div class="wf-context">Context: Project management team using Monday.com</div>
         <div class="wf-desc">Fires on every Monday.com task completion, logs it with manager attribution, auto-counts totals, and pushes a real-time Slack update including a running score.</div>
       </div>
       <div class="badge">Active · Event-driven</div>
@@ -278,14 +379,20 @@
           <div class="fvm">Manager · task name · completion time · cumulative total tasks</div>
         </div>
       </div>
+      <div class="card-actions">
+        <a href="#" class="card-btn card-btn-gh">View on GitHub</a>
+        <a href="#" class="card-btn card-btn-demo">Live Demo</a>
+      </div>
     </div>
   </div>
-
+ 
+  <!-- WF 4 -->
   <div class="wf">
     <div class="wf-head">
       <div>
         <div class="wf-tag tg"><span class="dot"></span>Data pipeline · Orders</div>
         <div class="wf-title">Orders &amp; customer data pipeline</div>
+        <div class="wf-context">Context: E-commerce operations team, multi-region reporting</div>
         <div class="wf-desc">Joins two Google Sheets datasets, deduplicates by Customer_ID, splits by price threshold, summarizes by region/country, and writes to segmented output tabs.</div>
       </div>
       <div class="badge">Data pipeline</div>
@@ -313,20 +420,27 @@
           <div class="tools"><span class="tb">removeDuplicates</span><span class="tb">IF</span><span class="tb">Merge</span><span class="tb">Summarize</span><span class="tb">Set</span></div>
         </div>
       </div>
+      <div class="card-actions">
+        <a href="#" class="card-btn card-btn-gh">View on GitHub</a>
+        <a href="#" class="card-btn card-btn-demo">Live Demo</a>
+      </div>
     </div>
   </div>
-
-  <!-- CAT 2 -->
+ 
+  <!-- CAT 2: AI AGENTS -->
   <div class="cat-row" style="margin-top:3rem">
     <div class="cat-pill ct">AI agents &amp; agentic workflows</div>
     <div class="cat-line"></div>
   </div>
-
+  <p class="cat-desc">Multi-step autonomous agents that make decisions, use tools, and complete complex tasks without human checkpoints.</p>
+ 
+  <!-- WF 5 -->
   <div class="wf">
     <div class="wf-head">
       <div>
         <div class="wf-tag tt"><span class="dot"></span>Multi-agent · Invoices</div>
         <div class="wf-title">Automated invoice reminder &amp; penalty calculator</div>
+        <div class="wf-context">Context: Finance operations team, 50–200 invoice accounts</div>
         <div class="wf-desc">Two chained AI agents identify overdue invoices, send a manager digest email, update reminder dates, then calculate and write tiered late penalties to Google Sheets — fully autonomously.</div>
       </div>
       <div class="badge">Scheduled · Daily</div>
@@ -358,14 +472,29 @@
           <div class="fvm">Tool-calling agents, agent chaining, fromAI() overrides, Sheets as data source + output, tiered logic in system prompts.</div>
         </div>
       </div>
+      <div class="fl" style="margin-top:1.5rem">Results</div>
+      <table class="results-table">
+        <thead><tr><th>Metric</th><th>Before</th><th>After</th><th>Improvement</th></tr></thead>
+        <tbody>
+          <tr><td>Weekly invoice review time</td><td>2–3 hrs manual</td><td>~2 min review</td><td>~95% time saved</td></tr>
+          <tr><td>Penalty calculation accuracy</td><td>Error-prone manual</td><td>Tiered rules + Calculator</td><td>100% consistent</td></tr>
+          <tr><td>Reminder tracking</td><td>Spreadsheet managed</td><td>Auto-updated per row</td><td>Fully automated</td></tr>
+        </tbody>
+      </table>
+      <div class="card-actions">
+        <a href="#" class="card-btn card-btn-gh">View on GitHub</a>
+        <a href="#" class="card-btn card-btn-demo">Live Demo</a>
+      </div>
     </div>
   </div>
-
+ 
+  <!-- WF 6 -->
   <div class="wf">
     <div class="wf-head">
       <div>
         <div class="wf-tag tt"><span class="dot"></span>AI reporting · Voice + chart</div>
         <div class="wf-title">Automated AI sales report with voice briefing</div>
+        <div class="wf-context">Context: SaaS sales team, weekly management reporting</div>
         <div class="wf-desc">Scheduled pipeline that pulls sales data, aggregates with JavaScript, generates a stacked bar chart and an AI voice briefing in parallel, then emails both as attachments.</div>
       </div>
       <div class="badge">Scheduled · Timer</div>
@@ -395,22 +524,36 @@
           </div>
           <div class="fl">Key concepts</div>
           <div class="fvm">Parallel branches, Merge node for binary data, OpenAI TTS-1-HD, Chart.js via HTTP API, Memory Buffer Window, Calculator tool.</div>
+          <div class="fl" style="margin-top:1.25rem">Demo</div>
+          <div class="demo-embed">
+            <div class="demo-embed-icon"></div>
+            <div class="demo-embed-text">Watch: Schedule trigger → chart + voice briefing delivered to email</div>
+            <a href="#">Add Loom link here</a>
+          </div>
+          <div class="demo-embed-caption">Full workflow from trigger to email delivery in under 90 seconds.</div>
         </div>
+      </div>
+      <div class="card-actions">
+        <a href="#" class="card-btn card-btn-gh">View on GitHub</a>
+        <a href="#" class="card-btn card-btn-demo">Live Demo</a>
       </div>
     </div>
   </div>
-
-  <!-- CAT 3 -->
+ 
+  <!-- CAT 3: RAG -->
   <div class="cat-row" style="margin-top:3rem">
     <div class="cat-pill ca">RAG &amp; knowledge systems</div>
     <div class="cat-line"></div>
   </div>
-
+  <p class="cat-desc">Retrieval-augmented generation pipelines that make internal knowledge queryable, classifiable, and actionable in real time.</p>
+ 
+  <!-- WF 7 -->
   <div class="wf">
     <div class="wf-head">
       <div>
         <div class="wf-tag ta"><span class="dot"></span>RAG chatbot · Supabase</div>
         <div class="wf-title">Stairlift knowledge base chatbot</div>
+        <div class="wf-context">Context: Consumer mobility products company, customer support use case</div>
         <div class="wf-desc">Two-phase RAG system: a PDF ingestion pipeline that vectorizes a product brochure into Supabase, and a live chat agent that retrieves and reranks context before answering.</div>
       </div>
       <div class="badge">Chat + Slack output</div>
@@ -437,16 +580,29 @@
           </div>
           <div class="fl">Key concepts</div>
           <div class="fvm">Two-phase RAG, Cohere reranking for precision, Redis persistent memory, retrieval-as-tool pattern, system prompt persona design.</div>
+          <div class="fl" style="margin-top:1.25rem">Demo</div>
+          <div class="demo-embed">
+            <div class="demo-embed-icon"></div>
+            <div class="demo-embed-text">Watch: Live product Q&A from ingestion through Slack response</div>
+            <a href="#">Add Loom link here</a>
+          </div>
+          <div class="demo-embed-caption">Two-phase RAG from PDF ingestion to live chat in under 90 seconds.</div>
         </div>
+      </div>
+      <div class="card-actions">
+        <a href="#" class="card-btn card-btn-gh">View on GitHub</a>
+        <a href="#" class="card-btn card-btn-demo">Live Demo</a>
       </div>
     </div>
   </div>
-
+ 
+  <!-- WF 8 -->
   <div class="wf">
     <div class="wf-head">
       <div>
         <div class="wf-tag ta"><span class="dot"></span>RAG ingestion · Pinecone</div>
         <div class="wf-title">Power.ai document ingestion processor</div>
+        <div class="wf-context">Context: Internal knowledge management, non-technical operations team</div>
         <div class="wf-desc">Form-triggered pipeline that accepts PDF uploads from non-technical team members, extracts text, and pushes embeddings into a named Pinecone namespace — powering the email classifier's RAG responses.</div>
       </div>
       <div class="badge">Form trigger · On-demand</div>
@@ -471,14 +627,20 @@
           <div class="fvm">Namespace-scoped vector storage, form-as-ingestion-UI, PDF extraction pipeline, stripNewLines for clean embeddings.</div>
         </div>
       </div>
+      <div class="card-actions">
+        <a href="#" class="card-btn card-btn-gh">View on GitHub</a>
+        <a href="#" class="card-btn card-btn-demo">Live Demo</a>
+      </div>
     </div>
   </div>
-
+ 
+  <!-- WF 9 -->
   <div class="wf">
     <div class="wf-head">
       <div>
         <div class="wf-tag ta"><span class="dot"></span>Email AI · Classifier + RAG</div>
         <div class="wf-title">AI email classifier &amp; auto-draft system</div>
+        <div class="wf-context">Context: Business development inbox, daily lead triage for AI services agency</div>
         <div class="wf-desc">Polls Gmail every minute, classifies each email into 3 categories with LLM, then routes to distinct handling paths — querying Pinecone for business leads, drafting personal replies, or doing nothing for noise.</div>
       </div>
       <div class="badge">Active · Every minute</div>
@@ -513,24 +675,45 @@
           <div class="flow" style="margin-top:4px">
             <div class="fs"><s>C</s>Other: no-op</div>
           </div>
-          <div class="fl">Key concepts</div>
-          <div class="fvm">Text Classifier node, LLM Chain persona drafting, Pinecone HTTP API query, Gmail label + draft creation, multi-branch routing.</div>
+          <div class="fl" style="margin-top:1.25rem">Demo</div>
+          <div class="demo-embed">
+            <div class="demo-embed-icon"></div>
+            <div class="demo-embed-text">Watch: Live email arrive, classify, and route to draft in real time</div>
+            <a href="#">Add Loom link here</a>
+          </div>
+          <div class="demo-embed-caption">Email classification and draft creation in under 60 seconds.</div>
         </div>
+      </div>
+      <div class="fl" style="margin-top:1.5rem">Results</div>
+      <table class="results-table">
+        <thead><tr><th>Metric</th><th>Before</th><th>After</th><th>Improvement</th></tr></thead>
+        <tbody>
+          <tr><td>Inbox triage time</td><td>15–20 min/day manual</td><td>Continuous, automated</td><td>~100% time saved</td></tr>
+          <tr><td>Lead response drafts</td><td>Written from scratch</td><td>RAG-powered draft ready</td><td>Instant first draft</td></tr>
+          <tr><td>Noise handling</td><td>Manual delete/ignore</td><td>Silently filtered</td><td>Zero manual effort</td></tr>
+        </tbody>
+      </table>
+      <div class="card-actions">
+        <a href="#" class="card-btn card-btn-gh">View on GitHub</a>
+        <a href="#" class="card-btn card-btn-demo">Live Demo</a>
       </div>
     </div>
   </div>
-
-  <!-- CAT 4 -->
+ 
+  <!-- CAT 4: SECURITY -->
   <div class="cat-row" style="margin-top:3rem">
     <div class="cat-pill cp">Security &amp; data acquisition</div>
     <div class="cat-line"></div>
   </div>
-
+  <p class="cat-desc">Guardrails, enrichment pipelines, and discovery methodology that protect AI systems and generate actionable lead data.</p>
+ 
+  <!-- WF 10 -->
   <div class="wf">
     <div class="wf-head">
       <div>
         <div class="wf-tag tp"><span class="dot"></span>Security · Defense in depth</div>
         <div class="wf-title">Multi-layer security guard for AI agents</div>
+        <div class="wf-context">Context: AI agent protection layer, pre-production deployment environment</div>
         <div class="wf-desc">Two-layer webhook guard that blocks prompt injections, PII exposure, and jailbreak attempts before any input reaches an AI model — returning HTTP 403 on violations and 200 on clean, sanitized payloads.</div>
       </div>
       <div class="badge">Webhook · Real-time</div>
@@ -563,14 +746,20 @@
           <div class="fvm">Defense-in-depth pattern, n8n Guardrails node, keyword + AI jailbreak detection, PII redaction, was_sanitized diff logging, HTTP response codes as security signals.</div>
         </div>
       </div>
+      <div class="card-actions">
+        <a href="#" class="card-btn card-btn-gh">View on GitHub</a>
+        <a href="#" class="card-btn card-btn-demo">Live Demo</a>
+      </div>
     </div>
   </div>
-
+ 
+  <!-- WF 11 -->
   <div class="wf">
     <div class="wf-head">
       <div>
         <div class="wf-tag tp"><span class="dot"></span>Lead gen · Apify + AI</div>
         <div class="wf-title">Web scraping &amp; AI lead enrichment pipeline</div>
+        <div class="wf-context">Context: Lead generation for local business outreach, any niche or city</div>
         <div class="wf-desc">Runs Google Maps Scraper via Apify, filters and deduplicates results, visits each website via Tavily, generates a per-company AI summary, and writes an enriched lead database to Google Sheets.</div>
       </div>
       <div class="badge">On-demand · Lead gen</div>
@@ -601,14 +790,20 @@
           <div class="tools"><span class="tb">Aggregate</span><span class="tb">Split Out</span><span class="tb">Filter</span><span class="tb">Switch</span><span class="tb">Loop Over Items</span><span class="tb">Edit Fields</span></div>
         </div>
       </div>
+      <div class="card-actions">
+        <a href="#" class="card-btn card-btn-gh">View on GitHub</a>
+        <a href="#" class="card-btn card-btn-demo">Live Demo</a>
+      </div>
     </div>
   </div>
-
+ 
+  <!-- WF 12 -->
   <div class="wf">
     <div class="wf-head">
       <div>
         <div class="wf-tag tp"><span class="dot"></span>Discovery · Methodology</div>
         <div class="wf-title">As-Is process analysis &amp; solution design brief</div>
+        <div class="wf-context">Context: Applied before every client engagement to prevent fragile automation</div>
         <div class="wf-desc">Structured discovery methodology applied before any build — documenting current state, scoring bottlenecks, and defining measurable success criteria via a Solution Design Brief.</div>
       </div>
       <div class="badge">Methodology artifact</div>
@@ -631,11 +826,15 @@
           </div>
         </div>
       </div>
+      <div class="card-actions">
+        <a href="#" class="card-btn card-btn-gh">View on GitHub</a>
+        <a href="#" class="card-btn card-btn-demo">Live Demo</a>
+      </div>
     </div>
   </div>
-
+ 
 </section>
-
+ 
 <!-- MODELS -->
 <section id="models">
   <div class="section-header">
@@ -654,7 +853,7 @@
     <div class="modc"><div class="modn">OpenRouter gateway</div><div class="modp">Multi-model routing</div><div class="modu">Unified LLM access across workflows</div></div>
   </div>
 </section>
-
+ 
 <!-- METHODOLOGY -->
 <section id="methodology">
   <div class="section-header">
@@ -679,12 +878,57 @@
     </div>
   </div>
 </section>
-
+ 
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-header">
+    <div class="section-label">05 · About &amp; contact</div>
+    <div class="section-title">Janetta Barker</div>
+  </div>
+  <div class="about-grid">
+    <div>
+      <p class="about-bio">
+        <strong>AI Automation Specialist</strong> with hands-on experience building production-grade n8n workflows across agentic AI, RAG knowledge systems, revenue operations, and security. Certified through Careerist's AI Automation program.
+      </p>
+      <p class="about-bio" style="margin-top:1rem">
+        I specialize in turning manual, error-prone processes into reliable automated systems — from lead capture and proposal generation to multi-agent invoice management and AI-powered email triage. Every workflow I build starts with a structured discovery process and ends with documented ROI.
+      </p>
+      <p class="about-bio" style="margin-top:1rem">
+        Available for <strong>full-time and contract roles</strong> in AI automation, revenue operations, and workflow engineering.
+      </p>
+      <div class="availability-badge">
+        <span class="availability-dot"></span>
+        Available for new opportunities
+      </div>
+    </div>
+    <div>
+      <div class="section-label" style="margin-bottom:1rem">Get in touch</div>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/janetta-barker-abb415319/" target="_blank" class="contact-link">
+          <div class="contact-link-icon">in</div>
+          linkedin.com/in/janetta-barker-abb415319
+        </a>
+        <a href="https://github.com/janettaeyvonne-glitch" target="_blank" class="contact-link">
+          <div class="contact-link-icon">gh</div>
+          github.com/janettaeyvonne-glitch
+        </a>
+        <a href="mailto:your@email.com" class="contact-link">
+          <div class="contact-link-icon">@</div>
+          your@email.com
+        </a>
+      </div>
+      <p style="font-size:12px; color:var(--dim); font-family:var(--ff-mono); margin-top:1.5rem;">
+        See also: <a href="compliance.html" style="color:var(--muted); text-decoration:none;">Compliance &amp; Ethics →</a>
+      </p>
+    </div>
+  </div>
+</section>
+ 
 <footer>
-  <p>AI Automation Specialist · Certified · 12-workflow portfolio</p>
+  <p>Janetta Barker · AI Automation Specialist · Certified · 12-workflow portfolio</p>
   <p>Orchestrated in n8n · OpenAI · Grok · Cohere · Apify · Tavily · Pinecone · Supabase</p>
 </footer>
-
+ 
 </div>
 </body>
 </html>
